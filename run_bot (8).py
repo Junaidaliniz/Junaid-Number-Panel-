@@ -424,7 +424,7 @@ async def send_panel_stats(update_or_query, panel_name, context):
             return
         group_ids = list(dict.fromkeys(group_ids))
         numbers_url = urljoin(base_url, "/portal/sms/received/getsms/number")
-        sms_detail_url = urljoin(base_url, "/portal/sms/received/getsms/number/sms")
+        sms_detail_url = urljoin(base_url, "/portal/sms/received/getsms")
         _re_number = re.compile(r"getDetialsNumber\('([^']+)'")
         _re_sms = re.compile(r'<p[^>]*class="[^"]*mb-0[^"]*"[^>]*>(.*?)</p>', re.DOTALL)
         range_counts = {}
